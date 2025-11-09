@@ -225,17 +225,26 @@ Food here is more than nourishment, it’s a daily expression of love, community
             </ScrollReveal>
           </div>
 
-          <div className="text-center">
-            <button
-              onClick={scrollToContact}
-              className="inline-block bg-gradient-to-r from-[#D67A99] to-[#B55676] text-white px-12 py-4 rounded-full text-lg font-medium hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              style={{ fontFamily: 'Lato, sans-serif' }}
-            >
-              Host your retreat at Devi Ghar
-            </button>
-          </div>
-        </div>
-      </section>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
+  <button
+    onClick={scrollToContact}
+    className="bg-gradient-to-r from-[#D67A99] to-[#B55676] text-white px-12 py-4 rounded-full text-lg font-medium hover:shadow-2xl transition-all duration-300 hover:scale-105"
+    style={{ fontFamily: 'Lato, sans-serif' }}
+  >
+    Host your retreat at Devi Ghar
+  </button>
+
+  <a
+    href="https://bookretreats.com/r/7-day-non-dual-yoga-awakening-retreat-in-rishikesh-india"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-gradient-to-r from-[#B55676] to-[#D67A99] text-white px-12 py-4 rounded-full text-lg font-medium hover:shadow-2xl transition-all duration-300 hover:scale-105"
+    style={{ fontFamily: 'Lato, sans-serif' }}
+  >
+    Join a retreat
+  </a>
+</div>
+
 
       <section className="py-24 px-6 md:px-12 bg-[#FDE6E9] relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5">
