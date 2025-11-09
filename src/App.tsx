@@ -224,20 +224,20 @@ Food here is more than nourishment, it’s a daily expression of love, community
               </div>
             </ScrollReveal>
           </div>
-<div className="flex justify-center items-center gap-3 text-center mt-8 overflow-x-auto whitespace-nowrap">
+<div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-center mt-8">
   <button
     onClick={scrollToContact}
-    className="bg-gradient-to-r from-[#D67A99] to-[#B55676] text-white px-8 py-4 rounded-full text-base font-medium hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[220px]"
+    className="bg-gradient-to-r from-[#D67A99] to-[#B55676] text-white px-10 py-4 rounded-full text-lg font-medium hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full sm:w-80 whitespace-nowrap text-center"
     style={{ fontFamily: 'Lato, sans-serif' }}
   >
-    Host your retreat
+    Host your retreat at Devi Ghar
   </button>
 
   <a
     href="https://bookretreats.com/r/7-day-non-dual-yoga-awakening-retreat-in-rishikesh-india"
     target="_blank"
     rel="noopener noreferrer"
-    className="bg-gradient-to-r from-[#B55676] to-[#D67A99] text-white px-8 py-4 rounded-full text-base font-medium hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[220px] text-center"
+    className="bg-gradient-to-r from-[#B55676] to-[#D67A99] text-white px-10 py-4 rounded-full text-lg font-medium hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full sm:w-80 whitespace-nowrap text-center flex justify-center"
     style={{ fontFamily: 'Lato, sans-serif' }}
   >
     Join a retreat
