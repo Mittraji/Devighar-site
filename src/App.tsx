@@ -125,7 +125,7 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal type="fadeIn">
             <h2 className="font-serif text-5xl md:text-6xl text-[#B55676] mb-8 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>
-              Host Your Retreat
+              Host Your Retreat or Join a Retreat
             </h2>
           </ScrollReveal>
           <ScrollReveal type="fadeIn" delay={0.1}>
