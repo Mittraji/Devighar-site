@@ -71,7 +71,7 @@ function App() {
             className="text-[#B55676]/90 mt-2 text-sm leading-relaxed"
             style={{ fontFamily: 'Lato, sans-serif' }}
           >
-            A bright, serene space surrounded by mountain views and the sound of the Ganga.
+            A bright, serene, calm space surrounded by mountain views.
           </p>
         </div>
 
