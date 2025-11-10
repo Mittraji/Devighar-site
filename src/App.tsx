@@ -1,4 +1,4 @@
-import { Mail, Instagram, MapPin, Home, Utensils, Flower2, Users } from 'lucide-react';
+import { Mail, Instagram, MapPin, Home, Utensils, Flower2, Users, BedDouble } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { ScrollReveal } from './components/ScrollReveal';
 
@@ -42,13 +42,97 @@ function App() {
   />
       </section>
         
-      <section className="pt-o pb-4 px-6 md:px-12 bg-[#FDE6E9]">
+      <section className="pt-0 pb-4 px-6 md:px-12 bg-[#FDE6E9]">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal type="fadeDown" delay={0}>
             <h2 className="font-serif text-5xl md:text-6xl text-[#B55676] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
               What is Devi Ghar
             </h2>
           </ScrollReveal>
+           <ScrollReveal type="fadeIn" delay={0.1}>
+      <div className="w-24 h-1 bg-gradient-to-r from-[#D67A99] via-[#D6A24C] to-[#D67A99] mx-auto mb-12" />
+    </ScrollReveal>
+
+    {/* 🌸 Four Pillars Section */}
+    <ScrollReveal type="fadeIn" delay={0.15}>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 mb-16 text-center">
+        {/* Yoga Shala */}
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D67A99] to-[#B55676] flex items-center justify-center mb-4">
+            <Home className="w-8 h-8 text-white" />
+          </div>
+          <h3
+            className="font-serif text-xl text-[#B55676]"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            Yoga Shala
+          </h3>
+          <p
+            className="text-[#B55676]/90 mt-2 text-sm leading-relaxed"
+            style={{ fontFamily: 'Lato, sans-serif' }}
+          >
+            A bright, serene space surrounded by mountain views and the sound of the Ganga.
+          </p>
+        </div>
+
+        {/* Meals */}
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D6A24C] to-[#D67A99] flex items-center justify-center mb-4">
+            <Utensils className="w-8 h-8 text-white" />
+          </div>
+          <h3
+            className="font-serif text-xl text-[#B55676]"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            Sattvic Meals
+          </h3>
+          <p
+            className="text-[#B55676]/90 mt-2 text-sm leading-relaxed"
+            style={{ fontFamily: 'Lato, sans-serif' }}
+          >
+            Nourishing vegetarian food prepared with love and devotion each day.
+          </p>
+        </div>
+
+        {/* Rooms */}
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#B55676] to-[#D6A24C] flex items-center justify-center mb-4">
+            <BedDouble className="w-8 h-8 text-white" />
+          </div>
+          <h3
+            className="font-serif text-xl text-[#B55676]"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            Peaceful Rooms
+          </h3>
+          <p
+            className="text-[#B55676]/90 mt-2 text-sm leading-relaxed"
+            style={{ fontFamily: 'Lato, sans-serif' }}
+          >
+            Clean, comfortable rooms that reflect simplicity, calm, and care.
+          </p>
+        </div>
+
+        {/* Support */}
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D67A99] to-[#D6A24C] flex items-center justify-center mb-4">
+            <Users className="w-8 h-8 text-white" />
+          </div>
+          <h3
+            className="font-serif text-xl text-[#B55676]"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            Retreat Support
+          </h3>
+          <p
+            className="text-[#B55676]/90 mt-2 text-sm leading-relaxed"
+            style={{ fontFamily: 'Lato, sans-serif' }}
+          >
+            Guidance and care for teachers and guests, so you can simply arrive and be.
+          </p>
+        </div>
+      </div>
+    </ScrollReveal>
           <ScrollReveal type="fadeIn" delay={0.1}>
             <div className="w-24 h-1 bg-gradient-to-r from-[#D67A99] via-[#D6A24C] to-[#D67A99] mx-auto mb-12" />
           </ScrollReveal>
@@ -84,7 +168,7 @@ function App() {
   <div className="flex flex-col items-center gap-6">
     {/* image frame */}
     <div
-      className="relative w-full max-w-[550px] aspect-[3/4] rounded-3xl overflow-hidden border-4 border-[#D6A24C] shadow-2xl bg-[#FDE6E9]"
+      className="relative w-full max-w-[470px] aspect-[3/4] rounded-3xl overflow-hidden border-4 border-[#D6A24C] shadow-2xl bg-[#FDE6E9]"
     >
       {galleryImages.map((img, idx) => (
         <div
@@ -218,7 +302,7 @@ Food here is more than nourishment, it’s a daily expression of love, community
 </p>
 
 <p className="text-[#B55676] leading-relaxed mb-4" style={{ fontFamily: 'Lato, sans-serif' }}>
-  Hosting here feels natural and heart-centered — everything flows smoothly so your retreat unfolds with harmony, trust, and grace.
+  Hosting here feels natural and heart-centered, everything flows smoothly so your retreat unfolds with harmony, trust, and grace.
 </p>
 
               </div>
@@ -268,7 +352,7 @@ Food here is more than nourishment, it’s a daily expression of love, community
 </p>
 
 <p className="text-lg md:text-xl text-[#B55676] leading-relaxed mb-6 text-center" style={{ fontFamily: 'Lato, sans-serif' }}>
-  The Ganga, or Gagan as she is lovingly called here, is not merely a river, she is a living presence, a goddess, a song of remembrance. Her waters carry prayers, stories, and blessings from the high Himalayas, washing away the noise of the world. To sit by her banks at dawn or watch her shimmer under the evening lamps is to feel the pulse of the divine within one’s own heart.
+  The Ganga is not merely a river, she is a living presence, a goddess, a song of remembrance. Her waters carry prayers, stories, and blessings from the high Himalayas, washing away the noise of the world. To sit by her banks at dawn or watch her shimmer under the evening lamps is to feel the pulse of the divine within one’s own heart.
 </p>
 
 <p className="text-lg md:text-xl text-[#B55676] leading-relaxed mb-6 text-center" style={{ fontFamily: 'Lato, sans-serif' }}>
