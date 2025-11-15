@@ -225,25 +225,25 @@ function App() {
         ))}
 
         {/* mobile-only arrows, over the image */}
-        <div className="absolute inset-y-1/2 left-0 right-0 flex justify-between px-3 md:hidden">
-          <button
-            onClick={() =>
-              setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
-            }
-            className="bg-[#B55676]/90 text-white rounded-full p-2 shadow-md hover:scale-105 transition"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
+<div className="absolute inset-y-1/2 left-0 right-0 flex justify-between px-3 md:hidden">
+  <button
+    onClick={() =>
+      setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
+    }
+    className="text-white p-2 md:hidden"
+  >
+    <ChevronLeft className="w-5 h-5" />
+  </button>
 
-          <button
-            onClick={() =>
-              setCurrentSlide((prev) => (prev + 1) % galleryImages.length)
-            }
-            className="bg-[#B55676]/90 text-white rounded-full p-2 shadow-md hover:scale-105 transition"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
+  <button
+    onClick={() =>
+      setCurrentSlide((prev) => (prev + 1) % galleryImages.length)
+    }
+    className="text-white p-2 md:hidden"
+  >
+    <ChevronRight className="w-5 h-5" />
+  </button>
+</div>
       </div>
 
       {/* dots – visible on both mobile & desktop */}
