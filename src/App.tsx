@@ -72,7 +72,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#FDE6E9]">
-      <section className="relative h-[80vh] flex items-center justify-center bg-[#FDE6E9]">
+<section className="relative flex items-center justify-center bg-[#FDE6E9] py-12 md:h-[80vh]">
   <img
     src="Devighar no email.png"
     className="w-[280px] md:w-[380px] lg:w-[450px] h-auto object-contain"
