@@ -1,4 +1,15 @@
-import { Mail, Instagram, MapPin, Home, Utensils, Flower2, Users, BedDouble } from 'lucide-react';
+import {
+  Mail,
+  Instagram,
+  MapPin,
+  Home,
+  Utensils,
+  Flower2,
+  Users,
+  BedDouble,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { ScrollReveal } from './components/ScrollReveal';
 
@@ -190,47 +201,65 @@ function App() {
           </ScrollReveal>
         </div>
 
-  <ScrollReveal type="scaleUp">
-  <div className="flex flex-col items-center gap-6">
-    {/* image frame */}
-    <div
-  className="relative w-full max-w-[470px] aspect-[3/4] rounded-3xl overflow-hidden border-4 border-[#D6A24C] shadow-2xl bg-[#FDE6E9]"
-  onTouchStart={handleTouchStart}
-  onTouchEnd={handleTouchEnd}
->
-      {galleryImages.map((img, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
-            idx === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <img
-  src={img}
-  alt={`Devi Ghar space ${idx + 1}`}
-  className="h-full w-full object-cover"
-/>
-        </div>
-      ))}
-    </div>
+   <ScrollReveal type="scaleUp">
+    <div className="flex flex-col items-center gap-6">
+      {/* image frame */}
+      <div
+        className="relative w-full max-w-[470px] aspect-[3/4] rounded-3xl overflow-hidden border-4 border-[#D6A24C] shadow-2xl bg-[#FDE6E9]"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {galleryImages.map((img, idx) => (
+          <div
+            key={idx}
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
+              idx === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={img}
+              alt={`Devi Ghar space ${idx + 1}`}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        ))}
 
-    {/* dots */}
-    <div className="flex gap-3 justify-center">
-      {galleryImages.map((_, idx) => (
-        <button
-          key={idx}
-          onClick={() => setCurrentSlide(idx)}
-          className={`w-3 h-3 rounded-full transition-all duration-300 ${
-            idx === currentSlide
-              ? 'bg-[#D6A24C] w-8'
-              : 'bg-[#B55676]/30 hover:bg-[#B55676]/60'
-          }`}
-          aria-label={`Go to slide ${idx + 1}`}
-        />
-      ))}
+        {/* mobile-only arrows, over the image */}
+        <div className="absolute inset-y-1/2 left-0 right-0 flex justify-between px-3 md:hidden">
+          <button
+            onClick={() =>
+              setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
+            }
+            className="bg-[#B55676]/90 text-white rounded-full p-2 shadow-md hover:scale-105 transition"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button
+            onClick={() =>
+              setCurrentSlide((prev) => (prev + 1) % galleryImages.length)
+            }
+            className="bg-[#B55676]/90 text-white rounded-full p-2 shadow-md hover:scale-105 transition"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+
+      {/* dots – visible on both mobile & desktop */}
+      <div className="flex gap-2 justify-center mt-2">
+        {galleryImages.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentSlide(idx)}
+            className={`w-2 h-2 rounded-full ${
+              idx === currentSlide ? 'bg-[#D6A24C]' : 'bg-[#B55676]/40'
+            }`}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-</ScrollReveal>
+  </ScrollReveal>
 </section>
 
       <section className="py-8 px-6 md:px-4 bg-gradient-to-b from-white/50 to-[#FFFBF5]">
