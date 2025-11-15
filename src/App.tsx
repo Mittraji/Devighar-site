@@ -1,9 +1,32 @@
 import { Mail, Instagram, MapPin, Home, Utensils, Flower2, Users, BedDouble } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ScrollReveal } from './components/ScrollReveal';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
+    const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX === null) return;
+
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchEndX - touchStartX;
+    const threshold = 50; // min swipe distance in px
+
+    if (diff > threshold) {
+      // swipe right → previous
+      setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    } else if (diff < -threshold) {
+      // swipe left → next
+      setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
+    }
+
+    setTouchStartX(null);
+  };
 
   const galleryImages = [
     'Corner pic.png',
@@ -171,8 +194,10 @@ function App() {
   <div className="flex flex-col items-center gap-6">
     {/* image frame */}
     <div
-      className="relative w-full max-w-[470px] aspect-[3/4] rounded-3xl overflow-hidden border-4 border-[#D6A24C] shadow-2xl bg-[#FDE6E9]"
-    >
+  className="relative w-full max-w-[470px] aspect-[3/4] rounded-3xl overflow-hidden border-4 border-[#D6A24C] shadow-2xl bg-[#FDE6E9]"
+  onTouchStart={handleTouchStart}
+  onTouchEnd={handleTouchEnd}
+>
       {galleryImages.map((img, idx) => (
         <div
           key={idx}
